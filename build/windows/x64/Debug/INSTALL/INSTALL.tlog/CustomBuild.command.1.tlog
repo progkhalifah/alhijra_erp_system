@@ -1,0 +1,10 @@
+^E:\SAIDINFORMATIONTECHNOLOGY\FLUTTER\ALHIJRA\BUILD\WINDOWS\CMAKEFILES\8C9E314E90F60A4932D183FCBDAE2CB1\INSTALL_FORCE.RULE
+setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

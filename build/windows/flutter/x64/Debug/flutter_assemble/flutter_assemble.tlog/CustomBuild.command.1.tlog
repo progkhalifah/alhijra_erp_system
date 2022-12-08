@@ -1,0 +1,28 @@
+^E:\SAIDINFORMATIONTECHNOLOGY\FLUTTER\ALHIJRA\BUILD\WINDOWS\CMAKEFILES\84D6CE9DD16556F391869B2CC2A7800A\FLUTTER_WINDOWS.DLL.RULE
+setlocal
+E:\APSNET\MicrosoftVisualStudio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E env FLUTTER_ROOT=E:\flutter\flutter PROJECT_DIR=E:\SaidInformationTechnology\Flutter\alhijra FLUTTER_ROOT=E:\flutter\flutter FLUTTER_EPHEMERAL_DIR=E:\SaidInformationTechnology\Flutter\alhijra\windows\flutter\ephemeral PROJECT_DIR=E:\SaidInformationTechnology\Flutter\alhijra FLUTTER_TARGET=E:\SaidInformationTechnology\Flutter\alhijra\lib\main.dart DART_DEFINES=RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=E:\SaidInformationTechnology\Flutter\alhijra\.dart_tool\package_config.json E:/flutter/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^E:\SAIDINFORMATIONTECHNOLOGY\FLUTTER\ALHIJRA\BUILD\WINDOWS\CMAKEFILES\5D07A78C572659630A50CC2547EA7787\FLUTTER_ASSEMBLE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^E:\SAIDINFORMATIONTECHNOLOGY\FLUTTER\ALHIJRA\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+E:\APSNET\MicrosoftVisualStudio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -SE:/SaidInformationTechnology/Flutter/alhijra/windows -BE:/SaidInformationTechnology/Flutter/alhijra/build/windows --check-stamp-file E:/SaidInformationTechnology/Flutter/alhijra/build/windows/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

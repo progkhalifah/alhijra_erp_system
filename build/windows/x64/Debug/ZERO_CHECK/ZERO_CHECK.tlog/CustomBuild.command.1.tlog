@@ -1,0 +1,10 @@
+^E:\SAIDINFORMATIONTECHNOLOGY\FLUTTER\ALHIJRA\BUILD\WINDOWS\CMAKEFILES\8C9E314E90F60A4932D183FCBDAE2CB1\GENERATE.STAMP.RULE
+setlocal
+E:\APSNET\MicrosoftVisualStudio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -SE:/SaidInformationTechnology/Flutter/alhijra/windows -BE:/SaidInformationTechnology/Flutter/alhijra/build/windows --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/SaidInformationTechnology/Flutter/alhijra/build/windows/alhijra.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

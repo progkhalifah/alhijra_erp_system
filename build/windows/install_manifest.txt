@@ -1,0 +1,11 @@
+E:/SaidInformationTechnology/Flutter/alhijra/build/windows/runner/Debug/data/icudtl.dat
+E:/SaidInformationTechnology/Flutter/alhijra/build/windows/runner/Debug/flutter_windows.dll
+E:/SaidInformationTechnology/Flutter/alhijra/build/windows/runner/Debug/data/flutter_assets/AssetManifest.json
+E:/SaidInformationTechnology/Flutter/alhijra/build/windows/runner/Debug/data/flutter_assets/assets/images/background_signin.png
+E:/SaidInformationTechnology/Flutter/alhijra/build/windows/runner/Debug/data/flutter_assets/assets/images/logo_alhejra.png
+E:/SaidInformationTechnology/Flutter/alhijra/build/windows/runner/Debug/data/flutter_assets/FontManifest.json
+E:/SaidInformationTechnology/Flutter/alhijra/build/windows/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+E:/SaidInformationTechnology/Flutter/alhijra/build/windows/runner/Debug/data/flutter_assets/kernel_blob.bin
+E:/SaidInformationTechnology/Flutter/alhijra/build/windows/runner/Debug/data/flutter_assets/NOTICES
+E:/SaidInformationTechnology/Flutter/alhijra/build/windows/runner/Debug/data/flutter_assets/NOTICES.Z
+E:/SaidInformationTechnology/Flutter/alhijra/build/windows/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
