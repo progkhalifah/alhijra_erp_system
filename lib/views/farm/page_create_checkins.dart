@@ -4,7 +4,19 @@ import 'package:get/get.dart';
 
 
 class CreateCheckins extends StatelessWidget {
-  const CreateCheckins({Key? key}) : super(key: key);
+  CreateCheckins({Key? key}) : super(key: key);
+
+  // Initial Selected Value
+  String dropdownvalue = 'مزرعة 1';
+
+  // List of items in our dropdown menu
+  var items = [
+    'مزرعة 1',
+    'مزرعة 2',
+    'مزرعة 3',
+    'مزرعة 4',
+    'مزرعة 5',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -33,20 +45,43 @@ class CreateCheckins extends StatelessWidget {
                   ],
                 ),
                 Row(
-                  children: const [
-                    Expanded(
-                      child: Padding(
-                        padding: EdgeInsets.all(20.0),
-                        child: TextField(
-                          obscureText: true,
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            labelText: '* موقع القطيع',
-                            hintText: 'إدخل موقع القطيع',
-                          ),
+                   mainAxisAlignment: MainAxisAlignment.end,
+                  children:  [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        margin: const EdgeInsets.symmetric(vertical: 10),
+                        width: 350,
+                        padding: const EdgeInsets.symmetric(horizontal: 8),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadiusDirectional.circular(5),
+                          border: Border.all(color: titleColor),
+                        ),
+                        child: DropdownButton(
+
+                          // Initial Value
+                          value: dropdownvalue,
+
+                          // Down Arrow Icon
+                          icon: const Icon(Icons.keyboard_arrow_down),
+
+                          // Array list of items
+                          items: items.map((String items) {
+                            return DropdownMenuItem(
+                              value: items,
+                              child: Text(items),
+                            );
+                          }).toList(),
+                          // After selecting the desired option,it will
+                          // change button value to selected value
+                          onChanged: (String? newValue) {
+                            Get.snackbar("Action", "This is event for list");
+                          },
                         ),
                       ),
                     ),
+                    const Text("* موقع القطيع", style: TextStyle(color: titleColor),),
+
                   ],
                 ),
                 Row(
@@ -55,15 +90,15 @@ class CreateCheckins extends StatelessWidget {
                       child: Padding(
                         padding: EdgeInsets.all(20.0),
                         child: TextField(
-                          obscureText: true,
+                          cursorColor: titleColor,
                           decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            labelText: '* اسم القطيع',
-                            hintText: 'إدخل اسم القطيع',
+                            focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
+                            border: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
                           ),
                         ),
                       ),
                     ),
+                    Text("* اسم القطيع", style: TextStyle(color: titleColor),),
                   ],
                 ),
                 Row(
@@ -72,10 +107,10 @@ class CreateCheckins extends StatelessWidget {
                     Container(
                       width: 100,
                       child: const TextField(
-                        enabled: true,
+                        cursorColor: titleColor,
                         decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-
+                          focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
+                          border: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
                         ),
                       ),
                     ),
@@ -87,10 +122,10 @@ class CreateCheckins extends StatelessWidget {
                     Container(
                       width: 100,
                       child: const TextField(
-                        enabled: true,
+                        cursorColor: titleColor,
                         decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-
+                          focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
+                          border: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
                         ),
                       ),
                     ),
@@ -107,10 +142,11 @@ class CreateCheckins extends StatelessWidget {
                     Container(
                       width: 100,
                       child: const TextField(
-                        enabled: true,
+                        enabled: false,
+                        cursorColor: titleColor,
                         decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-
+                          focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
+                          border: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
                         ),
                       ),
                     ),

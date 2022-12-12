@@ -4,14 +4,25 @@ import 'package:get/get.dart';
 
 
 class AddBuilding extends StatelessWidget {
-  const AddBuilding({Key? key}) : super(key: key);
+  AddBuilding({Key? key}) : super(key: key);
+
+  // Initial Selected Value
+  String dropdownvalue = 'مزرعة 1';
+
+  // List of items in our dropdown menu
+  var items = [
+    'مزرعة 1',
+    'مزرعة 2',
+    'مزرعة 3',
+    'مزرعة 4',
+    'مزرعة 5',
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Container(
-
           width: 500,
           height: 600,
           decoration: BoxDecoration(
@@ -68,20 +79,70 @@ class AddBuilding extends StatelessWidget {
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text("Hello I am Here"),
+                  children:  [
+                    Container(
+                      width: 91,
+                      padding: EdgeInsets.symmetric(horizontal: 8),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadiusDirectional.circular(10),
+                        border: Border.all(color: titleColor),
+                      ),
+                      child: DropdownButton(
+
+                        // Initial Value
+                        value: dropdownvalue,
+                        // Down Arrow Icon
+                        icon: const Icon(Icons.keyboard_arrow_down),
+
+                        // Array list of items
+                        items: items.map((String items) {
+                          return DropdownMenuItem(
+                            value: items,
+                            child: Text(items),
+                          );
+                        }).toList(),
+                        // After selecting the desired option,it will
+                        // change button value to selected value
+                        onChanged: (String? newValue) {
+                          Get.snackbar("Action", "This is event for list");
+                        },
+                      ),
                     ),
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.all(8.0),
                       child: Text("* تابع لموقع", style: TextStyle(color: titleColor),),
                     ),
-                    Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text("Hello I am Here"),
+                    SizedBox(width: 50,),
+                    Container(
+                      width: 91,
+                      padding: EdgeInsets.symmetric(horizontal: 8),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadiusDirectional.circular(10),
+                        border: Border.all(color: titleColor),
+                      ),
+                      child: DropdownButton(
+
+                        // Initial Value
+                        value: dropdownvalue,
+
+                        // Down Arrow Icon
+                        icon: const Icon(Icons.keyboard_arrow_down),
+
+                        // Array list of items
+                        items: items.map((String items) {
+                          return DropdownMenuItem(
+                            value: items,
+                            child: Text(items),
+                          );
+                        }).toList(),
+                        // After selecting the desired option,it will
+                        // change button value to selected value
+                        onChanged: (String? newValue) {
+                          Get.snackbar("Action", "This is event for list");
+                        },
+                      ),
                     ),
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.all(8.0),
                       child: Text("* نوع المبنى", style: TextStyle(color: titleColor),),
                     ),
@@ -96,8 +157,7 @@ class AddBuilding extends StatelessWidget {
                         padding: const EdgeInsets.all(20.0),
                         child: FlatButton(
                           onPressed: () => {
-                            Get.snackbar(
-                                "Button Login", "This is Event for Login")
+                            Get.toNamed("/beginningbreeding"),
                           },
                           color: titleColor,
                           child: const Text("إضافة"), textColor: Colors.white,),
