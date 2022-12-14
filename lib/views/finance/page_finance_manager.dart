@@ -43,21 +43,16 @@ class FinanceManagerPage extends StatelessWidget {
                             Container(
                               alignment: Alignment.topCenter,
                               width: 1100,
-                              height: 500,
-                              decoration: BoxDecoration(
-                                  border: Border.all(color: titleColor),
-                                  borderRadius: BorderRadius.circular(10.0)),
-                              child: Card(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10.0),
-                                ),
+                              height: 450,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
                                 child: Row(
                                   children: [
                                     SizedBox(height: 20, width: 20,),
                                     Column(
                                       children: [
                                         Container(
-                                          width: 250,
+                                          width: 330,
                                           height: 200,
                                           decoration: BoxDecoration(
                                               border: Border.all(color: titleColor),
@@ -66,12 +61,12 @@ class FinanceManagerPage extends StatelessWidget {
                                             shape: RoundedRectangleBorder(
                                               borderRadius: BorderRadius.circular(10.0),
                                             ),
-                                            child: Text("حالات القطعان"),
+                                            child: Text("حركة إنتاج البيض"),
                                           ),
                                         ),
                                         SizedBox(height: 20,),
                                         Container(
-                                          width: 250,
+                                          width: 330,
                                           height: 200,
                                           decoration: BoxDecoration(
                                               border: Border.all(color: titleColor),
@@ -80,7 +75,7 @@ class FinanceManagerPage extends StatelessWidget {
                                             shape: RoundedRectangleBorder(
                                               borderRadius: BorderRadius.circular(10.0),
                                             ),
-                                              child:Text("إجمالي الإيرادات"),
+                                              child:Text("متوسط تقدير تكلفة بيضة"),
                                           ),
                                         ),
                                       ],
@@ -89,7 +84,7 @@ class FinanceManagerPage extends StatelessWidget {
                                     Column(
                                       children: [
                                         Container(
-                                          width: 250,
+                                          width: 330,
                                           height: 200,
                                           decoration: BoxDecoration(
                                               border: Border.all(color: titleColor),
@@ -98,12 +93,12 @@ class FinanceManagerPage extends StatelessWidget {
                                             shape: RoundedRectangleBorder(
                                               borderRadius: BorderRadius.circular(10.0),
                                             ),
-                                            child: Text("حالات القطعان"),
+                                            child: Text("المراحل الزمنية للقطعان"),
                                           ),
                                         ),
                                         SizedBox(height: 20,),
                                         Container(
-                                          width: 250,
+                                          width: 330,
                                           height: 200,
                                           decoration: BoxDecoration(
                                               border: Border.all(color: titleColor),
@@ -112,7 +107,7 @@ class FinanceManagerPage extends StatelessWidget {
                                             shape: RoundedRectangleBorder(
                                               borderRadius: BorderRadius.circular(10.0),
                                             ),
-                                              child:Text("إجمالي الإيرادات"),
+                                              child:Text("إجمالي المصروفات"),
                                           ),
                                         ),
                                       ],
@@ -121,7 +116,7 @@ class FinanceManagerPage extends StatelessWidget {
                                     Column(
                                       children: [
                                         Container(
-                                          width: 250,
+                                          width: 330,
                                           height: 200,
                                           decoration: BoxDecoration(
                                               border: Border.all(color: titleColor),
@@ -135,7 +130,7 @@ class FinanceManagerPage extends StatelessWidget {
                                         ),
                                         SizedBox(height: 20,),
                                         Container(
-                                          width: 250,
+                                          width: 330,
                                           height: 200,
                                           decoration: BoxDecoration(
                                               border: Border.all(color: titleColor),
@@ -156,2165 +151,1353 @@ class FinanceManagerPage extends StatelessWidget {
                             ),
                             SizedBox(height: 20,),
                             Container(
-                              alignment: Alignment.topCenter,
                               width: 1100,
-                              height: 400,
-                              decoration: BoxDecoration(
-                                  border: Border.all(color: titleColor),
-                                  borderRadius: BorderRadius.circular(10.0)),
-                              child: Card(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10.0),
-                                ),
-                                shadowColor: Colors.black,
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      children: const [
-                                        Padding(
-                                          padding: EdgeInsets.only(left: 10,top: 10),
-                                          child: Icon(Icons.cancel_outlined, color: titleColor,),
-                                        ),
-                                        Spacer(),
-                                        Padding(
-                                          padding: EdgeInsets.only(right: 30,top: 10),
-                                          child: Text("إضافة موظف جديد", style: TextStyle(color: titleColor), ),
-                                        )
-                                      ],
-                                    ),
-                                    SizedBox(height: 20,),
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children:  [
-                                        SizedBox(
-                                          width: 140,
-                                          child: Expanded(
-                                            child: TextField(
-                                              cursorColor: titleColor,
-                                              decoration: const InputDecoration(
-                                                focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
-                                                border: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
-                                                // labelText: "إدخل التاريخ",
-                                                icon: Icon(Icons.calendar_today),
+                              height: 300,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Column(
+                                    children: [
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children:  [
+                                          SizedBox(
+                                            width: 240,
+                                            height: 50,
+                                            child: Expanded(
+                                              child: ElevatedButton(
+                                                onPressed: () {},
+                                                style: ElevatedButton.styleFrom(
+                                                  primary: Colors.white, // Background color
+                                                ),
+                                                child: Row(
+                                                  mainAxisAlignment: MainAxisAlignment.end,
+                                                  children: const [
+                                                    Text('إضافة إيراد',style: TextStyle(color: titleColor),), // <-- Text
+                                                    SizedBox(
+                                                      width: 5,
+                                                    ),
+                                                    Icon( // <-- Icon
+                                                      Icons.label_important_outline,
+                                                      size: 24.0,
+                                                      color: buttonColor,
+                                                    ),
+                                                  ],
+                                                ),
                                               ),
-                                              readOnly: true,
-                                              onTap: () async {
-                                                DateTime? pickedDate = await showDatePicker(
-                                                    context: context,
-                                                    initialDate: DateTime.now(), //get today's date
-                                                    firstDate:DateTime(2000), //DateTime.now() - not to allow to choose before today.
-                                                    lastDate: DateTime(2101)
-                                                );
-                                              },
+
                                             ),
                                           ),
-                                        ),
-                                        const Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: Text("*تاريخ الميلاد", style: TextStyle(color: titleColor),),
-                                        ),
-                                        SizedBox(width: 50,),
-                                        SizedBox(
-                                          width: 100,
-                                          child: Expanded(
-                                            child: TextField(
-                                              cursorColor: titleColor,
-                                              decoration: const InputDecoration(
-                                                focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
-                                                border: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
-                                                // labelText: "إدخل التاريخ",
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        const Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: Text("*رقم الهوية", style: TextStyle(color: titleColor),),
-                                        ),
-                                        SizedBox(width: 50,),
-                                        SizedBox(
-                                          width: 100,
-                                          child: Expanded(
-                                            child: TextField(
-                                              cursorColor: titleColor,
-                                              decoration: const InputDecoration(
-                                                focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
-                                                border: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
-                                                // labelText: "إدخل التاريخ",
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        const Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: Text("* اسم الموظف", style: TextStyle(color: titleColor),),
-                                        ),
-                                        SizedBox(width: 50,),
-                                        SizedBox(
-                                          width: 100,
-                                          child: Expanded(
-                                            child: TextField(
-                                              cursorColor: titleColor,
-                                              decoration: const InputDecoration(
-                                                focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
-                                                border: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
-                                                // labelText: "إدخل التاريخ",
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        const Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: Text("* الرقم الوظيفي", style: TextStyle(color: titleColor),),
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(height: 20,),
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children:  [
-                                        SizedBox(
-                                          width: 140,
-                                          child: Expanded(
-                                            child: TextField(
-                                              cursorColor: titleColor,
-                                              decoration: const InputDecoration(
-                                                focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
-                                                border: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
-                                                // labelText: "إدخل التاريخ",
-                                                icon: Icon(Icons.calendar_today),
-                                              ),
-                                              readOnly: true,
-                                              onTap: () async {
-                                                DateTime? pickedDate = await showDatePicker(
-                                                    context: context,
-                                                    initialDate: DateTime.now(), //get today's date
-                                                    firstDate:DateTime(2000), //DateTime.now() - not to allow to choose before today.
-                                                    lastDate: DateTime(2101)
-                                                );
-                                              },
-                                            ),
-                                          ),
-                                        ),
-                                        const Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: Text("*تاريخ التوظيف", style: TextStyle(color: titleColor),),
-                                        ),
-                                        SizedBox(width: 50,),
-                                        SizedBox(
-                                          width: 100,
-                                          child: Expanded(
-                                            child: TextField(
-                                              cursorColor: titleColor,
-                                              decoration: const InputDecoration(
-                                                focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
-                                                border: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
-                                                // labelText: "إدخل التاريخ",
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        const Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: Text("* البريد الإلكتروني", style: TextStyle(color: titleColor),),
-                                        ),
-                                        SizedBox(width: 50,),
-                                        SizedBox(
-                                          width: 100,
-                                          child: Expanded(
-                                            child: TextField(
-                                              cursorColor: titleColor,
-                                              decoration: InputDecoration(
-                                                focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
-                                                border: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
-                                                // labelText: "إدخل التاريخ",
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        const Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: Text("* رقم الجوال", style: TextStyle(color: titleColor),),
-                                        ),
-                                        SizedBox(width: 50,),
-                                        Container(
-                                          width: 120,
-                                          padding: EdgeInsets.symmetric(horizontal: 8),
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadiusDirectional.circular(10),
-                                            border: Border.all(color: titleColor),
-                                          ),
-                                          child: DropdownButton(
-
-                                            // Initial Value
-                                            value: dropdownvalue,
-
-                                            // Down Arrow Icon
-                                            icon: const Icon(Icons.keyboard_arrow_down),
-
-                                            // Array list of items
-                                            items: items.map((String items) {
-                                              return DropdownMenuItem(
-                                                value: items,
-                                                child: Text(items),
-                                              );
-                                            }).toList(),
-                                            // After selecting the desired option,it will
-                                            // change button value to selected value
-                                            onChanged: (String? newValue) {
-                                              Get.snackbar("Action", "This is event for list");
-                                            },
-                                          ),
-                                        ),
-                                        const Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: Text("* الجنس", style: TextStyle(color: titleColor),),
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(height: 20,),
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children:  [
-
-                                        Container(
-                                          width: 120,
-                                          padding: EdgeInsets.symmetric(horizontal: 8),
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadiusDirectional.circular(10),
-                                            border: Border.all(color: titleColor),
-                                          ),
-                                          child: DropdownButton(
-
-                                            // Initial Value
-                                            value: dropdownvalue,
-
-                                            // Down Arrow Icon
-                                            icon: const Icon(Icons.keyboard_arrow_down),
-
-                                            // Array list of items
-                                            items: items.map((String items) {
-                                              return DropdownMenuItem(
-                                                value: items,
-                                                child: Text(items),
-                                              );
-                                            }).toList(),
-                                            // After selecting the desired option,it will
-                                            // change button value to selected value
-                                            onChanged: (String? newValue) {
-                                              Get.snackbar("Action", "This is event for list");
-                                            },
-                                          ),
-                                        ),
-                                        const Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: Text("*الحالة الاجتماعية", style: TextStyle(color: titleColor),),
-                                        ),
-                                        const SizedBox(width: 50,),
-                                        SizedBox(
-                                          width: 100,
-                                          child: Expanded(
-                                            child: TextField(
-                                              cursorColor: titleColor,
-                                              decoration: InputDecoration(
-                                                focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
-                                                border: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
-                                                // labelText: "إدخل التاريخ",
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        const Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: Text("* الوظيفة", style: TextStyle(color: titleColor),),
-                                        ),
-                                      ],
-                                    ),
-
-                                    SizedBox(height: 20,),
-                                    Row(
-                                      children: [
-                                        Expanded(
-                                          child: Padding(
-                                            padding: const EdgeInsets.all(20.0),
-                                            child: FlatButton(
-                                              onPressed: () => {
-                                                Get.toNamed("/healthHerd")
-                                              },
-                                              color: titleColor, textColor: Colors.white,
-                                              child: const Text("حفظ"),),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            SizedBox(height: 20,),
-                            Container(
-                              alignment: Alignment.topCenter,
-                              width: 1100,
-                              height: 500,
-                              decoration: BoxDecoration(
-                                  border: Border.all(color: titleColor),
-                                  borderRadius: BorderRadius.circular(10.0)),
-                              child: Card(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10.0),
-                                ),
-                                shadowColor: Colors.black,
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        const Padding(
-                                          padding:
-                                          EdgeInsets.only(left: 10, top: 10),
-                                          child: Icon(
-                                            Icons.cancel_outlined,
-                                            color: titleColor,
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: ElevatedButton(onPressed: ()=>{
-                                            showDialog(context: context, builder: (BuildContext context){
-                                              return AlertDialog(
-                                                title: Text("Success"),
-                                                titleTextStyle:
-                                                TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 20),
-                                                actionsOverflowButtonSpacing: 20,
-                                                actions: [
-                                                  Center(
-                                                    child: Container(
-                                                      width: 900,
-                                                      height: 650,
-                                                      decoration: BoxDecoration(
-                                                          border: Border.all(color: titleColor),
-                                                          borderRadius: BorderRadius.circular(10.0)
-                                                      ),
-                                                      child: Card(
-                                                        shape: RoundedRectangleBorder(
-                                                          borderRadius: BorderRadius.circular(10.0),
-                                                        ),
-                                                        shadowColor: Colors.black ,
-                                                        child: Column(
-                                                          children: [
-                                                            Row(
+                                          SizedBox(width: 20,),
+                                          SizedBox(
+                                            width: 240,
+                                            height: 50,
+                                            child: Expanded(
+                                              child: ElevatedButton(
+                                                onPressed: () {
+                                                  showDialog(context: context, builder: (BuildContext context){
+                                                    return AlertDialog(
+                                                      actionsOverflowButtonSpacing: 20,
+                                                      actions: [
+                                                        Container(
+                                                          width: 900,
+                                                          height: 650,
+                                                          decoration: BoxDecoration(
+                                                              border: Border.all(color: titleColor),
+                                                              borderRadius: BorderRadius.circular(10.0)
+                                                          ),
+                                                          child: Card(
+                                                            shape: RoundedRectangleBorder(
+                                                              borderRadius: BorderRadius.circular(10.0),
+                                                            ),
+                                                            shadowColor: Colors.black ,
+                                                            child: Column(
                                                               children: [
-                                                                const Padding(
-                                                                  padding: EdgeInsets.only(left: 10,top: 10),
-                                                                  child: Icon(Icons.cancel_outlined, color: titleColor,),
-                                                                ),
-                                                                Padding(
-                                                                  padding: const EdgeInsets.all(8.0),
-                                                                  child: ElevatedButton(
-                                                                    onPressed: ()=>{
-                                                                      Get.toNamed("/pagelistpurchases")
-                                                                    },
-                                                                    child: Text("تصفية", style: TextStyle(color: Colors.white,) ,),
-                                                                    style: ElevatedButton.styleFrom(
-                                                                      primary: buttonColor,
-                                                                      shape: RoundedRectangleBorder(
-                                                                        borderRadius: BorderRadius.circular(10),
-                                                                      ),
-                                                                    ) ,
-                                                                  ),
-                                                                ),
-                                                                const SizedBox(
-                                                                  width: 100,
-                                                                  height: 30,
-                                                                  child: Expanded(
-                                                                    child: TextField(
-                                                                      cursorColor: titleColor,
-                                                                      decoration: InputDecoration(
-                                                                        focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: buttonColor)),
-                                                                        border: OutlineInputBorder(borderSide: BorderSide(color: buttonColor)),
-                                                                        // labelText: "إدخل التاريخ",
-                                                                        suffixIcon: Icon(Icons.search),
-                                                                        suffixIconColor: Colors.white38,
+                                                                Row(
+                                                                  children: [
+                                                                    const Padding(
+                                                                      padding: EdgeInsets.only(left: 10,top: 10),
+                                                                      child: Icon(Icons.cancel_outlined, color: titleColor,),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding: const EdgeInsets.all(8.0),
+                                                                      child: ElevatedButton(
+                                                                        onPressed: ()=>{},
+                                                                        child: Text("تصفية", style: TextStyle(color: Colors.white,) ,),
+                                                                        style: ElevatedButton.styleFrom(
+                                                                          primary: buttonColor,
+                                                                          shape: RoundedRectangleBorder(
+                                                                            borderRadius: BorderRadius.circular(10),
+                                                                          ),
+                                                                        ) ,
                                                                       ),
                                                                     ),
-                                                                  ),
+                                                                    Padding(
+                                                                      padding: const EdgeInsets.all(8.0),
+                                                                      child: ElevatedButton(
+                                                                        onPressed: ()=>{
+                                                                          Get.toNamed("/pagelistsuppliers"),
+                                                                        },
+                                                                        child: Text("+ إضافة جديد", style: TextStyle(color: Colors.white,) ,),
+                                                                        style: ElevatedButton.styleFrom(
+                                                                          primary: buttonColor,
+                                                                          shape: RoundedRectangleBorder(
+                                                                            borderRadius: BorderRadius.circular(10),
+                                                                          ),
+                                                                        ) ,
+                                                                      ),
+                                                                    ),
+                                                                    const SizedBox(
+                                                                      width: 100,
+                                                                      height: 30,
+                                                                      child: Expanded(
+                                                                        child: TextField(
+                                                                          cursorColor: titleColor,
+                                                                          decoration: InputDecoration(
+                                                                            focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: buttonColor)),
+                                                                            border: OutlineInputBorder(borderSide: BorderSide(color: buttonColor)),
+                                                                            // labelText: "إدخل التاريخ",
+                                                                            suffixIcon: Icon(Icons.search),
+                                                                            suffixIconColor: Colors.white38,
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                    Spacer(),
+                                                                    const Padding(
+                                                                      padding: EdgeInsets.only(right: 30,top: 10),
+                                                                      child: Text("قائمة العملاء", style: TextStyle(color: titleColor), ),
+                                                                    )
+                                                                  ],
                                                                 ),
-                                                                Spacer(),
-                                                                const Padding(
-                                                                  padding: EdgeInsets.only(right: 30,top: 10),
-                                                                  child: Text("قائمة المبيعات", style: TextStyle(color: titleColor), ),
-                                                                )
+                                                                SizedBox(width: 50, height: 20,),
+                                                                Padding(
+                                                                  padding: const EdgeInsets.only(left: 15.0, right: 15),
+                                                                  child: Table(
+                                                                    textDirection: TextDirection.rtl,
+
+                                                                    border: TableBorder.symmetric(outside: const BorderSide(color: Colors.transparent, width: 1.5)),
+                                                                    columnWidths: const {
+                                                                      0: FlexColumnWidth(1),
+                                                                      1: FlexColumnWidth(1),
+                                                                      2: FlexColumnWidth(1),
+                                                                      3: FlexColumnWidth(1),
+                                                                      4: FlexColumnWidth(1.5),
+                                                                      5: FlexColumnWidth(1),
+                                                                      6: FlexColumnWidth(1),
+                                                                      7: FlexColumnWidth(1),
+                                                                    },
+                                                                    children: [
+
+                                                                      TableRow(children: [
+                                                                        Center(
+                                                                          child: RadioListTile(
+                                                                            value: "",
+                                                                            groupValue: customers,
+                                                                            onChanged: (value){
+                                                                            },
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Container(
+                                                                              width: 50,
+                                                                              height: 30,
+                                                                              decoration: BoxDecoration(
+                                                                                shape: BoxShape.circle,
+                                                                                border: Border.all(
+                                                                                  color: Colors.transparent,
+                                                                                  width: 2,
+                                                                                ),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "ID",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "اسم العميل",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child:Text(
+                                                                              "رقم جوال العميل",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Center(
+                                                                              child: Text(
+                                                                                "العنوان",
+                                                                                style: TextStyle(fontSize: 15.0),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "ملاحظة",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Icon(
+                                                                              Icons.print,
+                                                                              color: titleColor,
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                      ]),
+                                                                      TableRow(children: [
+                                                                        Center(
+                                                                          child: RadioListTile(
+                                                                            value: "",
+                                                                            groupValue: customers,
+                                                                            onChanged: (value){
+                                                                            },
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Container(
+                                                                              width: 50,
+                                                                              height: 30,
+                                                                              decoration: BoxDecoration(
+                                                                                shape: BoxShape.circle,
+                                                                                border: Border.all(
+                                                                                  color: Colors.black,
+                                                                                  width: 2,
+                                                                                ),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "1",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "محمد",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child:Text(
+                                                                              "0559999958",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Center(
+                                                                              child: Text(
+                                                                                "مكة",
+                                                                                style: TextStyle(fontSize: 15.0),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Icon(
+                                                                              Icons.more_vert,
+                                                                              color: Colors.black,
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                      ]),
+                                                                      TableRow(children: [
+                                                                        Center(
+                                                                          child: RadioListTile(
+                                                                            value: "",
+                                                                            groupValue: customers,
+                                                                            onChanged: (value){
+                                                                            },
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Container(
+                                                                              width: 50,
+                                                                              height: 30,
+                                                                              decoration: BoxDecoration(
+                                                                                shape: BoxShape.circle,
+                                                                                border: Border.all(
+                                                                                  color: Colors.black,
+                                                                                  width: 2,
+                                                                                ),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "1",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "محمد",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child:Text(
+                                                                              "0559999958",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Center(
+                                                                              child: Text(
+                                                                                "مكة",
+                                                                                style: TextStyle(fontSize: 15.0),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Icon(
+                                                                              Icons.more_vert,
+                                                                              color: Colors.black,
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                      ]),
+                                                                      TableRow(children: [
+                                                                        Center(
+                                                                          child: RadioListTile(
+                                                                            value: "",
+                                                                            groupValue: customers,
+                                                                            onChanged: (value){
+                                                                            },
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Container(
+                                                                              width: 50,
+                                                                              height: 30,
+                                                                              decoration: BoxDecoration(
+                                                                                shape: BoxShape.circle,
+                                                                                border: Border.all(
+                                                                                  color: Colors.black,
+                                                                                  width: 2,
+                                                                                ),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "1",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "محمد",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child:Text(
+                                                                              "0559999958",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Center(
+                                                                              child: Text(
+                                                                                "مكة",
+                                                                                style: TextStyle(fontSize: 15.0),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Icon(
+                                                                              Icons.more_vert,
+                                                                              color: Colors.black,
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                      ]),
+                                                                      TableRow(children: [
+                                                                        Center(
+                                                                          child: RadioListTile(
+                                                                            value: "",
+                                                                            groupValue: customers,
+                                                                            onChanged: (value){
+                                                                            },
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Container(
+                                                                              width: 50,
+                                                                              height: 30,
+                                                                              decoration: BoxDecoration(
+                                                                                shape: BoxShape.circle,
+                                                                                border: Border.all(
+                                                                                  color: Colors.black,
+                                                                                  width: 2,
+                                                                                ),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "1",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "محمد",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child:Text(
+                                                                              "0559999958",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Center(
+                                                                              child: Text(
+                                                                                "مكة",
+                                                                                style: TextStyle(fontSize: 15.0),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Icon(
+                                                                              Icons.more_vert,
+                                                                              color: Colors.black,
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                      ]),
+                                                                      TableRow(children: [
+                                                                        Center(
+                                                                          child: RadioListTile(
+                                                                            value: "",
+                                                                            groupValue: customers,
+                                                                            onChanged: (value){
+                                                                            },
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Container(
+                                                                              width: 50,
+                                                                              height: 30,
+                                                                              decoration: BoxDecoration(
+                                                                                shape: BoxShape.circle,
+                                                                                border: Border.all(
+                                                                                  color: Colors.black,
+                                                                                  width: 2,
+                                                                                ),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "1",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "محمد",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child:Text(
+                                                                              "0559999958",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Center(
+                                                                              child: Text(
+                                                                                "مكة",
+                                                                                style: TextStyle(fontSize: 15.0),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Icon(
+                                                                              Icons.more_vert,
+                                                                              color: Colors.black,
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                      ]),
+                                                                      TableRow(children: [
+                                                                        Center(
+                                                                          child: RadioListTile(
+                                                                            value: "",
+                                                                            groupValue: customers,
+                                                                            onChanged: (value){
+                                                                            },
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Container(
+                                                                              width: 50,
+                                                                              height: 30,
+                                                                              decoration: BoxDecoration(
+                                                                                shape: BoxShape.circle,
+                                                                                border: Border.all(
+                                                                                  color: Colors.black,
+                                                                                  width: 2,
+                                                                                ),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "1",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "محمد",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child:Text(
+                                                                              "0559999958",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Center(
+                                                                              child: Text(
+                                                                                "مكة",
+                                                                                style: TextStyle(fontSize: 15.0),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Icon(
+                                                                              Icons.more_vert,
+                                                                              color: Colors.black,
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                      ]),
+                                                                      TableRow(children: [
+                                                                        Center(
+                                                                          child: RadioListTile(
+                                                                            value: "",
+                                                                            groupValue: customers,
+                                                                            onChanged: (value){
+                                                                            },
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Container(
+                                                                              width: 50,
+                                                                              height: 30,
+                                                                              decoration: BoxDecoration(
+                                                                                shape: BoxShape.circle,
+                                                                                border: Border.all(
+                                                                                  color: Colors.black,
+                                                                                  width: 2,
+                                                                                ),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "1",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "محمد",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child:Text(
+                                                                              "0559999958",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Center(
+                                                                              child: Text(
+                                                                                "مكة",
+                                                                                style: TextStyle(fontSize: 15.0),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Icon(
+                                                                              Icons.more_vert,
+                                                                              color: Colors.black,
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                      ]),
+                                                                      TableRow(children: [
+                                                                        Center(
+                                                                          child: RadioListTile(
+                                                                            value: "",
+                                                                            groupValue: customers,
+                                                                            onChanged: (value){
+                                                                            },
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Container(
+                                                                              width: 50,
+                                                                              height: 30,
+                                                                              decoration: BoxDecoration(
+                                                                                shape: BoxShape.circle,
+                                                                                border: Border.all(
+                                                                                  color: Colors.black,
+                                                                                  width: 2,
+                                                                                ),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "1",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "محمد",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child:Text(
+                                                                              "0559999958",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Center(
+                                                                              child: Text(
+                                                                                "مكة",
+                                                                                style: TextStyle(fontSize: 15.0),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Icon(
+                                                                              Icons.more_vert,
+                                                                              color: Colors.black,
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                      ]),
+                                                                      TableRow(children: [
+                                                                        Center(
+                                                                          child: RadioListTile(
+                                                                            value: "",
+                                                                            groupValue: customers,
+                                                                            onChanged: (value){
+                                                                            },
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Container(
+                                                                              width: 50,
+                                                                              height: 30,
+                                                                              decoration: BoxDecoration(
+                                                                                shape: BoxShape.circle,
+                                                                                border: Border.all(
+                                                                                  color: Colors.black,
+                                                                                  width: 2,
+                                                                                ),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "1",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "محمد",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child:Text(
+                                                                              "0559999958",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Center(
+                                                                              child: Text(
+                                                                                "مكة",
+                                                                                style: TextStyle(fontSize: 15.0),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Icon(
+                                                                              Icons.more_vert,
+                                                                              color: Colors.black,
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                      ]),
+                                                                      TableRow(children: [
+                                                                        Center(
+                                                                          child: RadioListTile(
+                                                                            value: "",
+                                                                            groupValue: customers,
+                                                                            onChanged: (value){
+                                                                            },
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Container(
+                                                                              width: 50,
+                                                                              height: 30,
+                                                                              decoration: BoxDecoration(
+                                                                                shape: BoxShape.circle,
+                                                                                border: Border.all(
+                                                                                  color: Colors.black,
+                                                                                  width: 2,
+                                                                                ),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "1",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "محمد",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child:Text(
+                                                                              "0559999958",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Center(
+                                                                              child: Text(
+                                                                                "مكة",
+                                                                                style: TextStyle(fontSize: 15.0),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Text(
+                                                                              "",
+                                                                              style: TextStyle(fontSize: 15.0),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.all(8.0),
+                                                                            child: Icon(
+                                                                              Icons.more_vert,
+                                                                              color: Colors.black,
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                      ]),
+                                                                    ],
+                                                                  ),
+                                                                ), // end of table
                                                               ],
                                                             ),
-                                                            SizedBox(width: 50, height: 20,),
-                                                            Padding(
-                                                              padding: const EdgeInsets.only(left: 15.0, right: 15),
-                                                              child: Table(
-                                                                textDirection: TextDirection.rtl,
-
-                                                                border: TableBorder.symmetric(outside: const BorderSide(color: Colors.transparent, width: 1.5)),
-                                                                columnWidths: const {
-                                                                  0: FlexColumnWidth(1),
-                                                                  1: FlexColumnWidth(1),
-                                                                  2: FlexColumnWidth(1),
-                                                                  3: FlexColumnWidth(1),
-                                                                  4: FlexColumnWidth(1.5),
-                                                                  5: FlexColumnWidth(1),
-                                                                  6: FlexColumnWidth(1),
-                                                                  7: FlexColumnWidth(1),
-                                                                },
-                                                                children: const [
-                                                                  TableRow(children: [
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "ID",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "رقم الفاتورة",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "اسم العميل",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "المنتج",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child:Text(
-                                                                          "الكمية",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Center(
-                                                                          child: Text(
-                                                                            "إجمالي الفاتورة قبل ض.ق",
-                                                                            style: TextStyle(fontSize: 15.0),
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "إجمالي الفاتورة بعد ض.ق",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Icon(
-                                                                          Icons.print,
-                                                                          color: titleColor,
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                  ]),
-                                                                  TableRow(children: [
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "1",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "54545",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "محمد",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "بيض",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child:Text(
-                                                                          "9500",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Center(
-                                                                          child: Text(
-                                                                            "10000",
-                                                                            style: TextStyle(fontSize: 15.0),
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "11500",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Icon(
-                                                                          Icons.more_vert,
-                                                                          color: Colors.black,
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                  ]),
-                                                                  TableRow(children: [
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "1",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "54545",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "محمد",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "بيض",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child:Text(
-                                                                          "9500",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Center(
-                                                                          child: Text(
-                                                                            "10000",
-                                                                            style: TextStyle(fontSize: 15.0),
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "11500",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Icon(
-                                                                          Icons.more_vert,
-                                                                          color: Colors.black,
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                  ]),
-                                                                  TableRow(children: [
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "1",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "54545",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "محمد",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "بيض",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child:Text(
-                                                                          "9500",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Center(
-                                                                          child: Text(
-                                                                            "10000",
-                                                                            style: TextStyle(fontSize: 15.0),
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "11500",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Icon(
-                                                                          Icons.more_vert,
-                                                                          color: Colors.black,
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                  ]),
-                                                                  TableRow(children: [
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "1",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "54545",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "محمد",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "بيض",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child:Text(
-                                                                          "9500",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Center(
-                                                                          child: Text(
-                                                                            "10000",
-                                                                            style: TextStyle(fontSize: 15.0),
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "11500",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Icon(
-                                                                          Icons.more_vert,
-                                                                          color: Colors.black,
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                  ]),
-                                                                  TableRow(children: [
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "1",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "54545",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "محمد",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "بيض",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child:Text(
-                                                                          "9500",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Center(
-                                                                          child: Text(
-                                                                            "10000",
-                                                                            style: TextStyle(fontSize: 15.0),
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "11500",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Icon(
-                                                                          Icons.more_vert,
-                                                                          color: Colors.black,
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                  ]),
-                                                                  TableRow(children: [
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "1",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "54545",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "محمد",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "بيض",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child:Text(
-                                                                          "9500",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Center(
-                                                                          child: Text(
-                                                                            "10000",
-                                                                            style: TextStyle(fontSize: 15.0),
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "11500",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Icon(
-                                                                          Icons.more_vert,
-                                                                          color: Colors.black,
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                  ]),
-                                                                  TableRow(children: [
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "1",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "54545",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "محمد",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "بيض",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child:Text(
-                                                                          "9500",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Center(
-                                                                          child: Text(
-                                                                            "10000",
-                                                                            style: TextStyle(fontSize: 15.0),
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "11500",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Icon(
-                                                                          Icons.more_vert,
-                                                                          color: Colors.black,
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                  ]),
-                                                                  TableRow(children: [
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "1",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "54545",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "محمد",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "بيض",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child:Text(
-                                                                          "9500",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Center(
-                                                                          child: Text(
-                                                                            "10000",
-                                                                            style: TextStyle(fontSize: 15.0),
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Text(
-                                                                          "11500",
-                                                                          style: TextStyle(fontSize: 15.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Center(
-                                                                      child: Padding(
-                                                                        padding: EdgeInsets.all(8.0),
-                                                                        child: Icon(
-                                                                          Icons.more_vert,
-                                                                          color: Colors.black,
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                  ]),
-                                                                ],
-                                                              ),
-                                                            ), // end of table
-                                                          ],
+                                                          ),
                                                         ),
-                                                      ),
+                                                      ],
+                                                    );
+                                                  });
+                                                },
+                                                style: ElevatedButton.styleFrom(
+                                                  primary: Colors.white, // Background color
+                                                ),
+                                                child: Row(
+                                                  mainAxisAlignment: MainAxisAlignment.end,
+                                                  children: const [
+                                                    Text('قائمة العملاء',style: TextStyle(color: titleColor),), // <-- Text
+                                                    SizedBox(
+                                                      width: 5,
                                                     ),
-                                                  ),
-                                                ],
-                                                content: Text("Saved successfully"),
-                                              );
-                                            })
-                                          }, child: Text("Alert Dialog")),
-                                        ),
-                                        const SizedBox(
-                                          width: 100,
-                                          height: 30,
-                                          child: Expanded(
-                                            child: TextField(
-                                              cursorColor: titleColor,
-                                              decoration: InputDecoration(
-                                                focusedBorder: OutlineInputBorder(
-                                                    borderSide: BorderSide(
-                                                        color: buttonColor)),
-                                                border: OutlineInputBorder(
-                                                    borderSide: BorderSide(
-                                                        color: buttonColor)),
-                                                // labelText: "إدخل التاريخ",
-                                                suffixIcon: Icon(Icons.search),
-                                                suffixIconColor: Colors.white38,
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        Spacer(),
-                                        const Padding(
-                                          padding:
-                                          EdgeInsets.only(right: 30, top: 10),
-                                          child: Text(
-                                            "قائمة الموظفين",
-                                            style: TextStyle(color: titleColor),
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                    SizedBox(
-                                      width: 50,
-                                      height: 20,
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                          left: 15.0, right: 15),
-                                      child: Table(
-                                        textDirection: TextDirection.rtl,
-                                        border: TableBorder.symmetric(
-                                            outside: const BorderSide(
-                                                color: Colors.transparent,
-                                                width: 1.5)),
-                                        columnWidths: const {
-                                          0: FlexColumnWidth(1),
-                                          1: FlexColumnWidth(1),
-                                          2: FlexColumnWidth(1),
-                                          3: FlexColumnWidth(1),
-                                          4: FlexColumnWidth(1.5),
-                                          5: FlexColumnWidth(1),
-                                          6: FlexColumnWidth(1),
-                                          7: FlexColumnWidth(1),
-                                        },
-                                        children: [
-                                          TableRow(children: [
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "#",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "الرقم الوظيفي",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "اسم الموظف",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "رقم الهوية",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "رقم الجوال",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Center(
-                                                  child: Text(
-                                                    "الوظيفة",
-                                                    style:
-                                                    TextStyle(fontSize: 15.0),
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "كلمة المرور",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "الإجراء",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                          ]),
-                                          TableRow(children: [
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "1",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "8",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "محمد",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "2225552525",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "0564698987",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Center(
-                                                  child: Text(
-                                                    "مدير عام",
-                                                    style:
-                                                    TextStyle(fontSize: 15.0),
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: ElevatedButton(
-                                                  onPressed: () => {
-                                                    Get.toNamed("/pagelistpurchases")
-                                                  },
-                                                  child: Text(
-                                                    "إعادة تعيين",
-                                                    style: TextStyle(
-                                                      color: Colors.white,
+                                                    Icon( // <-- Icon
+                                                      Icons.label_important_outline,
+                                                      size: 24.0,
+                                                      color: buttonColor,
                                                     ),
-                                                  ),
-                                                  style: ElevatedButton.styleFrom(
-                                                    primary: titleColor,
-                                                    shape: RoundedRectangleBorder(
-                                                      borderRadius:
-                                                      BorderRadius.circular(10),
-                                                    ),
-                                                  ),
+                                                  ],
                                                 ),
                                               ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Icon(
-                                                  Icons.more_vert,
-                                                  color: Colors.black,
-                                                ),
-                                              ),
-                                            ),
-                                          ]),
-                                          TableRow(children: [
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "1",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "8",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "محمد",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "2225552525",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "0564698987",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Center(
-                                                  child: Text(
-                                                    "مدير عام",
-                                                    style:
-                                                    TextStyle(fontSize: 15.0),
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: ElevatedButton(
-                                                  onPressed: () => {
-                                                    Get.toNamed("/pagelistpurchases")
-                                                  },
-                                                  child: Text(
-                                                    "إعادة تعيين",
-                                                    style: TextStyle(
-                                                      color: Colors.white,
-                                                    ),
-                                                  ),
-                                                  style: ElevatedButton.styleFrom(
-                                                    primary: titleColor,
-                                                    shape: RoundedRectangleBorder(
-                                                      borderRadius:
-                                                      BorderRadius.circular(10),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Icon(
-                                                  Icons.more_vert,
-                                                  color: Colors.black,
-                                                ),
-                                              ),
-                                            ),
-                                          ]),
-                                          TableRow(children: [
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "1",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "8",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "محمد",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "2225552525",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "0564698987",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Center(
-                                                  child: Text(
-                                                    "مدير عام",
-                                                    style:
-                                                    TextStyle(fontSize: 15.0),
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: ElevatedButton(
-                                                  onPressed: () => {
-                                                    Get.toNamed("/pagelistpurchases")
-                                                  },
-                                                  child: Text(
-                                                    "إعادة تعيين",
-                                                    style: TextStyle(
-                                                      color: Colors.white,
-                                                    ),
-                                                  ),
-                                                  style: ElevatedButton.styleFrom(
-                                                    primary: titleColor,
-                                                    shape: RoundedRectangleBorder(
-                                                      borderRadius:
-                                                      BorderRadius.circular(10),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Icon(
-                                                  Icons.more_vert,
-                                                  color: Colors.black,
-                                                ),
-                                              ),
-                                            ),
-                                          ]),
-                                          TableRow(children: [
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "1",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "8",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "محمد",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "2225552525",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "0564698987",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Center(
-                                                  child: Text(
-                                                    "مدير عام",
-                                                    style:
-                                                    TextStyle(fontSize: 15.0),
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: ElevatedButton(
-                                                  onPressed: () => {
-                                                    Get.toNamed("/pagelistpurchases")
-                                                  },
-                                                  child: Text(
-                                                    "إعادة تعيين",
-                                                    style: TextStyle(
-                                                      color: Colors.white,
-                                                    ),
-                                                  ),
-                                                  style: ElevatedButton.styleFrom(
-                                                    primary: titleColor,
-                                                    shape: RoundedRectangleBorder(
-                                                      borderRadius:
-                                                      BorderRadius.circular(10),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Icon(
-                                                  Icons.more_vert,
-                                                  color: Colors.black,
-                                                ),
-                                              ),
-                                            ),
-                                          ]),
-                                          TableRow(children: [
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "1",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "8",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "محمد",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "2225552525",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "0564698987",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Center(
-                                                  child: Text(
-                                                    "مدير عام",
-                                                    style:
-                                                    TextStyle(fontSize: 15.0),
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: ElevatedButton(
-                                                  onPressed: () => {
-                                                    Get.toNamed("/pagelistpurchases")
-                                                  },
-                                                  child: Text(
-                                                    "إعادة تعيين",
-                                                    style: TextStyle(
-                                                      color: Colors.white,
-                                                    ),
-                                                  ),
-                                                  style: ElevatedButton.styleFrom(
-                                                    primary: titleColor,
-                                                    shape: RoundedRectangleBorder(
-                                                      borderRadius:
-                                                      BorderRadius.circular(10),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Icon(
-                                                  Icons.more_vert,
-                                                  color: Colors.black,
-                                                ),
-                                              ),
-                                            ),
-                                          ]),
-                                          TableRow(children: [
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "1",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "8",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "محمد",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "2225552525",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "0564698987",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Center(
-                                                  child: Text(
-                                                    "مدير عام",
-                                                    style:
-                                                    TextStyle(fontSize: 15.0),
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: ElevatedButton(
-                                                  onPressed: () => {
-                                                    Get.toNamed("/pagelistpurchases")
-                                                  },
-                                                  child: Text(
-                                                    "إعادة تعيين",
-                                                    style: TextStyle(
-                                                      color: Colors.white,
-                                                    ),
-                                                  ),
-                                                  style: ElevatedButton.styleFrom(
-                                                    primary: titleColor,
-                                                    shape: RoundedRectangleBorder(
-                                                      borderRadius:
-                                                      BorderRadius.circular(10),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Icon(
-                                                  Icons.more_vert,
-                                                  color: Colors.black,
-                                                ),
-                                              ),
-                                            ),
-                                          ]),
-                                          TableRow(children: [
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "1",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "8",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "محمد",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "2225552525",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "0564698987",
-                                                  style:
-                                                  TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Center(
-                                                  child: Text(
-                                                    "مدير عام",
-                                                    style:
-                                                    TextStyle(fontSize: 15.0),
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: ElevatedButton(
-                                                  onPressed: () => {
-                                                    Get.toNamed("/pagelistpurchases")
-                                                  },
-                                                  child: Text(
-                                                    "إعادة تعيين",
-                                                    style: TextStyle(
-                                                      color: Colors.white,
-                                                    ),
-                                                  ),
-                                                  style: ElevatedButton.styleFrom(
-                                                    primary: titleColor,
-                                                    shape: RoundedRectangleBorder(
-                                                      borderRadius:
-                                                      BorderRadius.circular(10),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                            Center(
-                                              child: Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Icon(
-                                                  Icons.more_vert,
-                                                  color: Colors.black,
-                                                ),
-                                              ),
-                                            ),
-                                          ]),
 
+                                            ),
+                                          ),
+                                          SizedBox(width: 20,),
+                                          SizedBox(
+                                            width: 240,
+                                            height: 50,
+                                            child: Expanded(
+                                              child: ElevatedButton(
+                                                onPressed: () {},
+                                                style: ElevatedButton.styleFrom(
+                                                  primary: Colors.white, // Background color
+                                                ),
+                                                child: Row(
+                                                  mainAxisAlignment: MainAxisAlignment.end,
+                                                  children: const [
+                                                    Text('إضافة تكلفة',style: TextStyle(color: titleColor),), // <-- Text
+                                                    SizedBox(
+                                                      width: 5,
+                                                    ),
+                                                    Icon( // <-- Icon
+                                                      Icons.label_important_outline,
+                                                      size: 24.0,
+                                                      color: buttonColor,
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+
+                                            ),
+                                          ),
                                         ],
                                       ),
-                                    ), // end of table
-                                  ],
-                                ),
-                              ),
-                            ),
-                            SizedBox(height: 20,),
-                            Container(
-                              alignment: Alignment.topCenter,
-                              width: 900,
-                              height: 500,
-                              decoration: BoxDecoration(
-                                  border: Border.all(color: titleColor),
-                                  borderRadius: BorderRadius.circular(10.0)),
-                              child: Card(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10.0),
-                                ),
-                                shadowColor: Colors.black,
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      children: const [
-                                        Padding(
-                                          padding: EdgeInsets.only(left: 10,top: 10),
-                                          child: Icon(Icons.cancel_outlined, color: titleColor,),
-                                        ),
-                                        Spacer(),
-                                        Padding(
-                                          padding: EdgeInsets.only(right: 30,top: 10),
-                                          child: Text("إنشاء مستخدم جديد", style: TextStyle(color: titleColor), ),
-                                        )
-                                      ],
-                                    ),
-                                    SizedBox(height: 20,),
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children:  [
-                                        SizedBox(width: 50,),
-                                        Container(
-                                          width: 120,
-                                          padding: EdgeInsets.symmetric(horizontal: 8),
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadiusDirectional.circular(10),
-                                            border: Border.all(color: titleColor),
-                                          ),
-                                          child: DropdownButton(
+                                      SizedBox(height: 20,),
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children:  [
+                                          SizedBox(
+                                            width: 240,
+                                            height: 50,
+                                            child: Expanded(
+                                              child: ElevatedButton(
+                                                onPressed: () {},
+                                                style: ElevatedButton.styleFrom(
+                                                  primary: Colors.white, // Background color
+                                                ),
+                                                child: Row(
+                                                  mainAxisAlignment: MainAxisAlignment.end,
+                                                  children: const [
+                                                    Text('قائمة الموردين',style: TextStyle(color: titleColor),), // <-- Text
+                                                    SizedBox(
+                                                      width: 5,
+                                                    ),
+                                                    Icon( // <-- Icon
+                                                      Icons.label_important_outline,
+                                                      size: 24.0,
+                                                      color: buttonColor,
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
 
-                                            // Initial Value
-                                            value: dropdownvalue,
-
-                                            // Down Arrow Icon
-                                            icon: const Icon(Icons.keyboard_arrow_down),
-
-                                            // Array list of items
-                                            items: items.map((String items) {
-                                              return DropdownMenuItem(
-                                                value: items,
-                                                child: Text(items),
-                                              );
-                                            }).toList(),
-                                            // After selecting the desired option,it will
-                                            // change button value to selected value
-                                            onChanged: (String? newValue) {
-                                              Get.snackbar("Action", "This is event for list");
-                                            },
-                                          ),
-                                        ),
-                                        const Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: Text("* الدور", style: TextStyle(color: titleColor),),
-                                        ),
-                                        SizedBox(width: 50,),
-                                        Container(
-                                          width: 120,
-                                          padding: EdgeInsets.symmetric(horizontal: 8),
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadiusDirectional.circular(10),
-                                            border: Border.all(color: titleColor),
-                                          ),
-                                          child: DropdownButton(
-
-                                            // Initial Value
-                                            value: dropdownvalue,
-
-                                            // Down Arrow Icon
-                                            icon: const Icon(Icons.keyboard_arrow_down),
-
-                                            // Array list of items
-                                            items: items.map((String items) {
-                                              return DropdownMenuItem(
-                                                value: items,
-                                                child: Text(items),
-                                              );
-                                            }).toList(),
-                                            // After selecting the desired option,it will
-                                            // change button value to selected value
-                                            onChanged: (String? newValue) {
-                                              Get.snackbar("Action", "This is event for list");
-                                            },
-                                          ),
-                                        ),
-                                        const Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: Text("*الموظف", style: TextStyle(color: titleColor),),
-                                        ),
-
-                                      ],
-                                    ),
-                                    SizedBox(height: 20,),
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children:  [
-                                        SizedBox(width: 50,),
-                                        Container(
-                                          width: 120,
-                                          padding: EdgeInsets.symmetric(horizontal: 8),
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadiusDirectional.circular(10),
-                                            border: Border.all(color: titleColor),
-                                          ),
-                                          child: DropdownButton(
-
-                                            // Initial Value
-                                            value: dropdownvalue,
-
-                                            // Down Arrow Icon
-                                            icon: const Icon(Icons.keyboard_arrow_down),
-
-                                            // Array list of items
-                                            items: items.map((String items) {
-                                              return DropdownMenuItem(
-                                                value: items,
-                                                child: Text(items),
-                                              );
-                                            }).toList(),
-                                            // After selecting the desired option,it will
-                                            // change button value to selected value
-                                            onChanged: (String? newValue) {
-                                              Get.snackbar("Action", "This is event for list");
-                                            },
-                                          ),
-                                        ),
-                                        const Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: Text("*الموقع", style: TextStyle(color: titleColor),),
-                                        ),
-                                        SizedBox(width: 50,),
-                                        Container(
-                                          width: 120,
-                                          padding: EdgeInsets.symmetric(horizontal: 8),
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadiusDirectional.circular(10),
-                                            border: Border.all(color: titleColor),
-                                          ),
-                                          child: DropdownButton(
-
-                                            // Initial Value
-                                            value: dropdownvalue,
-
-                                            // Down Arrow Icon
-                                            icon: const Icon(Icons.keyboard_arrow_down),
-
-                                            // Array list of items
-                                            items: items.map((String items) {
-                                              return DropdownMenuItem(
-                                                value: items,
-                                                child: Text(items),
-                                              );
-                                            }).toList(),
-                                            // After selecting the desired option,it will
-                                            // change button value to selected value
-                                            onChanged: (String? newValue) {
-                                              Get.snackbar("Action", "This is event for list");
-                                            },
-                                          ),
-                                        ),
-                                        const Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: Text("* البريد الإلكتروني", style: TextStyle(color: titleColor),),
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(height: 20,),
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children:  [
-                                        Expanded(
-                                          child: TextField(
-                                            cursorColor: titleColor,
-                                            decoration: InputDecoration(
-                                              focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
-                                              border: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
-                                              // labelText: "إدخل التاريخ",
                                             ),
                                           ),
-                                        ),
-                                        const Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: Text("* اسم المستخدم", style: TextStyle(color: titleColor),),
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(height: 20,),
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children:  [
-                                        Expanded(
-                                          child: TextField(
-                                            cursorColor: titleColor,
-                                            decoration: InputDecoration(
-                                              focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
-                                              border: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
-                                              // labelText: "إدخل التاريخ",
+                                          SizedBox(width: 20,),
+                                          SizedBox(
+                                            width: 240,
+                                            height: 50,
+                                            child: Expanded(
+                                              child: ElevatedButton(
+                                                onPressed: () {},
+                                                style: ElevatedButton.styleFrom(
+                                                  primary: Colors.white, // Background color
+                                                ),
+                                                child: Row(
+                                                  mainAxisAlignment: MainAxisAlignment.end,
+                                                  children: const [
+                                                    Text('عرض ميزان مراجعة',style: TextStyle(color: titleColor),), // <-- Text
+                                                    SizedBox(
+                                                      width: 5,
+                                                    ),
+                                                    Icon( // <-- Icon
+                                                      Icons.label_important_outline,
+                                                      size: 24.0,
+                                                      color: buttonColor,
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+
                                             ),
                                           ),
-                                        ),
-                                        const Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: Text("* اسم المستخدم", style: TextStyle(color: titleColor),),
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(height: 20,),
-                                    Row(
-                                      children: [
-                                        Expanded(
-                                          child: Padding(
-                                            padding: const EdgeInsets.all(20.0),
-                                            child: FlatButton(
-                                              onPressed: () => {
-                                                Get.toNamed("/healthHerd")
-                                              },
-                                              color: titleColor, textColor: Colors.white,
-                                              child: const Text("حفظ"),),
+                                          SizedBox(width: 20,),
+                                          SizedBox(
+                                            width: 240,
+                                            height: 50,
+                                            child: Expanded(
+                                              child: ElevatedButton(
+                                                onPressed: () {},
+                                                style: ElevatedButton.styleFrom(
+                                                  primary: Colors.white, // Background color
+                                                ),
+                                                child: Row(
+                                                  mainAxisAlignment: MainAxisAlignment.end,
+                                                  children: const [
+                                                    Text('قائمة المناديب',style: TextStyle(color: titleColor),), // <-- Text
+                                                    SizedBox(
+                                                      width: 5,
+                                                    ),
+                                                    Icon( // <-- Icon
+                                                      Icons.label_important_outline,
+                                                      size: 24.0,
+                                                      color: buttonColor,
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+
+                                            ),
                                           ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
+                                        ],
+                                      ),
+                                      SizedBox(height: 20,),
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children:  [
+                                          SizedBox(
+                                            width: 240,
+                                            height: 50,
+                                            child: Expanded(
+                                              child: ElevatedButton(
+                                                onPressed: () {},
+                                                style: ElevatedButton.styleFrom(
+                                                  primary: Colors.white, // Background color
+                                                ),
+                                                child: Row(
+                                                  mainAxisAlignment: MainAxisAlignment.end,
+                                                  children: const [
+                                                    Text('عرض ميزان عام',style: TextStyle(color: titleColor),), // <-- Text
+                                                    SizedBox(
+                                                      width: 5,
+                                                    ),
+                                                    Icon( // <-- Icon
+                                                      Icons.label_important_outline,
+                                                      size: 24.0,
+                                                      color: buttonColor,
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+
+                                            ),
+                                          ),
+                                          SizedBox(width: 20,),
+                                          SizedBox(
+                                            width: 240,
+                                            height: 50,
+                                            child: Expanded(
+                                              child: ElevatedButton(
+                                                onPressed: () {},
+                                                style: ElevatedButton.styleFrom(
+                                                  primary: Colors.white, // Background color
+                                                ),
+                                                child: Row(
+                                                  mainAxisAlignment: MainAxisAlignment.end,
+                                                  children: const [
+                                                    Text('قائمة المبيعات',style: TextStyle(color: titleColor),), // <-- Text
+                                                    SizedBox(
+                                                      width: 5,
+                                                    ),
+                                                    Icon( // <-- Icon
+                                                      Icons.label_important_outline,
+                                                      size: 24.0,
+                                                      color: buttonColor,
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+
+                                            ),
+                                          ),
+                                          SizedBox(width: 20,),
+                                          SizedBox(
+                                            width: 240,
+                                            height: 50,
+                                            child: Expanded(
+                                              child: ElevatedButton(
+                                                onPressed: () {},
+                                                style: ElevatedButton.styleFrom(
+                                                  primary: Colors.white, // Background color
+                                                ),
+                                                child: Row(
+                                                  mainAxisAlignment: MainAxisAlignment.end,
+                                                  children: const [
+                                                    Text('عرض المدد المالية',style: TextStyle(color: titleColor),), // <-- Text
+                                                    SizedBox(
+                                                      width: 5,
+                                                    ),
+                                                    Icon( // <-- Icon
+                                                      Icons.label_important_outline,
+                                                      size: 24.0,
+                                                      color: buttonColor,
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      SizedBox(height: 20,),
+                                      Row(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children:  [
+                                          SizedBox(
+                                            width: 240,
+                                            height: 50,
+                                            child: Expanded(
+                                              child: ElevatedButton(
+                                                onPressed: () {},
+                                                style: ElevatedButton.styleFrom(
+                                                  primary: Colors.white, // Background color
+                                                ),
+                                                child: Row(
+                                                  mainAxisAlignment: MainAxisAlignment.end,
+                                                  children: const [
+                                                    Text('قائمة المشتريات',style: TextStyle(color: titleColor),), // <-- Text
+                                                    SizedBox(
+                                                      width: 5,
+                                                    ),
+                                                    Icon( // <-- Icon
+                                                      Icons.label_important_outline,
+                                                      size: 24.0,
+                                                      color: buttonColor,
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+
+                                            ),
+                                          ),
+                                          SizedBox(width: 20,),
+                                          SizedBox(
+                                            width: 240,
+                                            height: 50,
+                                            child: Expanded(
+                                              child: ElevatedButton(
+                                                onPressed: () {},
+                                                style: ElevatedButton.styleFrom(
+                                                  primary: Colors.white, // Background color
+                                                ),
+                                                child: Row(
+                                                  mainAxisAlignment: MainAxisAlignment.end,
+                                                  children: const [
+                                                    Text('تقرير ملخص التسليم',style: TextStyle(color: titleColor),), // <-- Text
+                                                    SizedBox(
+                                                      width: 5,
+                                                    ),
+                                                    Icon( // <-- Icon
+                                                      Icons.label_important_outline,
+                                                      size: 24.0,
+                                                      color: buttonColor,
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+
+                                            ),
+                                          ),
+                                          SizedBox(width: 50,),
+                                        ],
+                                      ),
+                                      SizedBox(height: 20,),
+
+                                    ],
+                                  ),
+                                ],
                               ),
                             ),
                             SizedBox(height: 20,),
@@ -2325,7 +1508,7 @@ class FinanceManagerPage extends StatelessWidget {
                           children: [
                             sidebarmenu(),
                             SizedBox(
-                              height: 1400,
+                              height: 280,
                             ),
                           ],
                         ),
