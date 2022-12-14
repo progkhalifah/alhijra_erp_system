@@ -41,7 +41,7 @@ class HrManagerPage extends StatelessWidget {
                         children: [
                           Container(
                             alignment: Alignment.topCenter,
-                            width: 1550,
+                            width: 1100,
                             height: 500,
                             decoration: BoxDecoration(
                                 border: Border.all(color: titleColor),
@@ -894,10 +894,11 @@ class HrManagerPage extends StatelessWidget {
                               ),
                             ),
                           ),
+                          SizedBox(height: 20,),
                           Container(
                             alignment: Alignment.topCenter,
-                            width: 1550,
-                            height: 500,
+                            width: 1100,
+                            height: 400,
                             decoration: BoxDecoration(
                                 border: Border.all(color: titleColor),
                                 borderRadius: BorderRadius.circular(10.0)),
@@ -909,849 +910,291 @@ class HrManagerPage extends StatelessWidget {
                               child: Column(
                                 children: [
                                   Row(
-                                    children: [
-                                      const Padding(
-                                        padding:
-                                            EdgeInsets.only(left: 10, top: 10),
-                                        child: Icon(
-                                          Icons.cancel_outlined,
-                                          color: titleColor,
-                                        ),
-                                      ),
+                                    children: const [
                                       Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: ElevatedButton(
-                                          onPressed: () => {
-                                            Get.toNamed("/pagelistpurchases")
-                                          },
-                                          child: Text(
-                                            "تصفية",
-                                            style: TextStyle(
-                                              color: Colors.white,
+                                        padding: EdgeInsets.only(left: 10,top: 10),
+                                        child: Icon(Icons.cancel_outlined, color: titleColor,),
+                                      ),
+                                      Spacer(),
+                                      Padding(
+                                        padding: EdgeInsets.only(right: 30,top: 10),
+                                        child: Text("إضافة موظف جديد", style: TextStyle(color: titleColor), ),
+                                      )
+                                    ],
+                                  ),
+                                  SizedBox(height: 20,),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children:  [
+                                      SizedBox(
+                                        width: 140,
+                                        child: Expanded(
+                                          child: TextField(
+                                            cursorColor: titleColor,
+                                            decoration: const InputDecoration(
+                                              focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
+                                              border: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
+                                              // labelText: "إدخل التاريخ",
+                                              icon: Icon(Icons.calendar_today),
                                             ),
+                                            readOnly: true,
+                                            onTap: () async {
+                                              DateTime? pickedDate = await showDatePicker(
+                                                  context: context,
+                                                  initialDate: DateTime.now(), //get today's date
+                                                  firstDate:DateTime(2000), //DateTime.now() - not to allow to choose before today.
+                                                  lastDate: DateTime(2101)
+                                              );
+                                            },
                                           ),
-                                          style: ElevatedButton.styleFrom(
-                                            primary: buttonColor,
-                                            shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(10),
+                                        ),
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.all(8.0),
+                                        child: Text("*تاريخ الميلاد", style: TextStyle(color: titleColor),),
+                                      ),
+                                      SizedBox(width: 50,),
+                                      SizedBox(
+                                        width: 100,
+                                        child: Expanded(
+                                          child: TextField(
+                                            cursorColor: titleColor,
+                                            decoration: const InputDecoration(
+                                              focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
+                                              border: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
+                                              // labelText: "إدخل التاريخ",
                                             ),
                                           ),
                                         ),
                                       ),
-                                      const SizedBox(
+                                      const Padding(
+                                        padding: EdgeInsets.all(8.0),
+                                        child: Text("*رقم الهوية", style: TextStyle(color: titleColor),),
+                                      ),
+                                      SizedBox(width: 50,),
+                                      SizedBox(
                                         width: 100,
-                                        height: 30,
+                                        child: Expanded(
+                                          child: TextField(
+                                            cursorColor: titleColor,
+                                            decoration: const InputDecoration(
+                                              focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
+                                              border: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
+                                              // labelText: "إدخل التاريخ",
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.all(8.0),
+                                        child: Text("* اسم الموظف", style: TextStyle(color: titleColor),),
+                                      ),
+                                      SizedBox(width: 50,),
+                                      SizedBox(
+                                        width: 100,
+                                        child: Expanded(
+                                          child: TextField(
+                                            cursorColor: titleColor,
+                                            decoration: const InputDecoration(
+                                              focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
+                                              border: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
+                                              // labelText: "إدخل التاريخ",
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.all(8.0),
+                                        child: Text("* الرقم الوظيفي", style: TextStyle(color: titleColor),),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(height: 20,),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children:  [
+                                      SizedBox(
+                                        width: 140,
+                                        child: Expanded(
+                                          child: TextField(
+                                            cursorColor: titleColor,
+                                            decoration: const InputDecoration(
+                                              focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
+                                              border: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
+                                              // labelText: "إدخل التاريخ",
+                                              icon: Icon(Icons.calendar_today),
+                                            ),
+                                            readOnly: true,
+                                            onTap: () async {
+                                              DateTime? pickedDate = await showDatePicker(
+                                                  context: context,
+                                                  initialDate: DateTime.now(), //get today's date
+                                                  firstDate:DateTime(2000), //DateTime.now() - not to allow to choose before today.
+                                                  lastDate: DateTime(2101)
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.all(8.0),
+                                        child: Text("*تاريخ التوظيف", style: TextStyle(color: titleColor),),
+                                      ),
+                                      SizedBox(width: 50,),
+                                      SizedBox(
+                                        width: 100,
+                                        child: Expanded(
+                                          child: TextField(
+                                            cursorColor: titleColor,
+                                            decoration: const InputDecoration(
+                                              focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
+                                              border: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
+                                              // labelText: "إدخل التاريخ",
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.all(8.0),
+                                        child: Text("* البريد الإلكتروني", style: TextStyle(color: titleColor),),
+                                      ),
+                                      SizedBox(width: 50,),
+                                      SizedBox(
+                                        width: 100,
                                         child: Expanded(
                                           child: TextField(
                                             cursorColor: titleColor,
                                             decoration: InputDecoration(
-                                              focusedBorder: OutlineInputBorder(
-                                                  borderSide: BorderSide(
-                                                      color: buttonColor)),
-                                              border: OutlineInputBorder(
-                                                  borderSide: BorderSide(
-                                                      color: buttonColor)),
+                                              focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
+                                              border: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
                                               // labelText: "إدخل التاريخ",
-                                              suffixIcon: Icon(Icons.search),
-                                              suffixIconColor: Colors.white38,
                                             ),
                                           ),
                                         ),
                                       ),
-                                      Spacer(),
                                       const Padding(
-                                        padding:
-                                            EdgeInsets.only(right: 30, top: 10),
-                                        child: Text(
-                                          "قائمة الموظفين",
-                                          style: TextStyle(color: titleColor),
+                                        padding: EdgeInsets.all(8.0),
+                                        child: Text("* رقم الجوال", style: TextStyle(color: titleColor),),
+                                      ),
+                                      SizedBox(width: 50,),
+                                      Container(
+                                        width: 120,
+                                        padding: EdgeInsets.symmetric(horizontal: 8),
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadiusDirectional.circular(10),
+                                          border: Border.all(color: titleColor),
                                         ),
-                                      )
+                                        child: DropdownButton(
+
+                                          // Initial Value
+                                          value: dropdownvalue,
+
+                                          // Down Arrow Icon
+                                          icon: const Icon(Icons.keyboard_arrow_down),
+
+                                          // Array list of items
+                                          items: items.map((String items) {
+                                            return DropdownMenuItem(
+                                              value: items,
+                                              child: Text(items),
+                                            );
+                                          }).toList(),
+                                          // After selecting the desired option,it will
+                                          // change button value to selected value
+                                          onChanged: (String? newValue) {
+                                            Get.snackbar("Action", "This is event for list");
+                                          },
+                                        ),
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.all(8.0),
+                                        child: Text("* الجنس", style: TextStyle(color: titleColor),),
+                                      ),
                                     ],
                                   ),
-                                  SizedBox(
-                                    width: 50,
-                                    height: 20,
+                                  SizedBox(height: 20,),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children:  [
+
+                                      Container(
+                                        width: 120,
+                                        padding: EdgeInsets.symmetric(horizontal: 8),
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadiusDirectional.circular(10),
+                                          border: Border.all(color: titleColor),
+                                        ),
+                                        child: DropdownButton(
+
+                                          // Initial Value
+                                          value: dropdownvalue,
+
+                                          // Down Arrow Icon
+                                          icon: const Icon(Icons.keyboard_arrow_down),
+
+                                          // Array list of items
+                                          items: items.map((String items) {
+                                            return DropdownMenuItem(
+                                              value: items,
+                                              child: Text(items),
+                                            );
+                                          }).toList(),
+                                          // After selecting the desired option,it will
+                                          // change button value to selected value
+                                          onChanged: (String? newValue) {
+                                            Get.snackbar("Action", "This is event for list");
+                                          },
+                                        ),
+                                      ),
+                                       const Padding(
+                                        padding: EdgeInsets.all(8.0),
+                                        child: Text("*الحالة الاجتماعية", style: TextStyle(color: titleColor),),
+                                      ),
+                                      const SizedBox(width: 50,),
+                                      SizedBox(
+                                        width: 100,
+                                        child: Expanded(
+                                          child: TextField(
+                                            cursorColor: titleColor,
+                                            decoration: InputDecoration(
+                                              focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
+                                              border: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
+                                              // labelText: "إدخل التاريخ",
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.all(8.0),
+                                        child: Text("* الوظيفة", style: TextStyle(color: titleColor),),
+                                      ),
+                                    ],
                                   ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 15.0, right: 15),
-                                    child: Table(
-                                      textDirection: TextDirection.rtl,
-                                      border: TableBorder.symmetric(
-                                          outside: const BorderSide(
-                                              color: Colors.transparent,
-                                              width: 1.5)),
-                                      columnWidths: const {
-                                        0: FlexColumnWidth(1),
-                                        1: FlexColumnWidth(1),
-                                        2: FlexColumnWidth(1),
-                                        3: FlexColumnWidth(1),
-                                        4: FlexColumnWidth(1.5),
-                                        5: FlexColumnWidth(1),
-                                        6: FlexColumnWidth(1),
-                                        7: FlexColumnWidth(1),
-                                      },
-                                      children: const [
-                                        TableRow(children: [
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "#",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "الرقم الوظيفي",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "اسم الموظف",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "رقم الهوية",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "رقم الجوال",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Center(
-                                                child: Text(
-                                                  "الوظيفة",
-                                                  style:
-                                                      TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "البريد الإلكتروني",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "الإجراء",
-                                                style:
-                                                TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                        ]),
-                                        TableRow(children: [
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "1",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "8",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "محمد",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "2225552525",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "0564698987",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Center(
-                                                child: Text(
-                                                  "مدير عام",
-                                                  style:
-                                                      TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "GG@hh.com",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Icon(
-                                                Icons.more_vert,
-                                                color: Colors.black,
-                                              ),
-                                            ),
-                                          ),
-                                        ]),
-                                        TableRow(children: [
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "1",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "8",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "محمد",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "2225552525",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "0564698987",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Center(
-                                                child: Text(
-                                                  "مدير عام",
-                                                  style:
-                                                      TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "GG@hh.com",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Icon(
-                                                Icons.more_vert,
-                                                color: Colors.black,
-                                              ),
-                                            ),
-                                          ),
-                                        ]),
-                                        TableRow(children: [
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "1",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "8",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "محمد",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "2225552525",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "0564698987",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Center(
-                                                child: Text(
-                                                  "مدير عام",
-                                                  style:
-                                                      TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "GG@hh.com",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Icon(
-                                                Icons.more_vert,
-                                                color: Colors.black,
-                                              ),
-                                            ),
-                                          ),
-                                        ]),
-                                        TableRow(children: [
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "1",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "8",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "محمد",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "2225552525",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "0564698987",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Center(
-                                                child: Text(
-                                                  "مدير عام",
-                                                  style:
-                                                      TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "GG@hh.com",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Icon(
-                                                Icons.more_vert,
-                                                color: Colors.black,
-                                              ),
-                                            ),
-                                          ),
-                                        ]),
-                                        TableRow(children: [
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "1",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "8",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "محمد",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "2225552525",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "0564698987",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Center(
-                                                child: Text(
-                                                  "مدير عام",
-                                                  style:
-                                                      TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "GG@hh.com",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Icon(
-                                                Icons.more_vert,
-                                                color: Colors.black,
-                                              ),
-                                            ),
-                                          ),
-                                        ]),
-                                        TableRow(children: [
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "1",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "8",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "محمد",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "2225552525",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "0564698987",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Center(
-                                                child: Text(
-                                                  "مدير عام",
-                                                  style:
-                                                      TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "GG@hh.com",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Icon(
-                                                Icons.more_vert,
-                                                color: Colors.black,
-                                              ),
-                                            ),
-                                          ),
-                                        ]),
-                                        TableRow(children: [
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "1",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "8",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "محمد",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "2225552525",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "0564698987",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Center(
-                                                child: Text(
-                                                  "مدير عام",
-                                                  style:
-                                                      TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "GG@hh.com",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Icon(
-                                                Icons.more_vert,
-                                                color: Colors.black,
-                                              ),
-                                            ),
-                                          ),
-                                        ]),
-                                        TableRow(children: [
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "1",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "8",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "محمد",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "2225552525",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "0564698987",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Center(
-                                                child: Text(
-                                                  "مدير عام",
-                                                  style:
-                                                      TextStyle(fontSize: 15.0),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "GG@hh.com",
-                                                style:
-                                                    TextStyle(fontSize: 15.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Center(
-                                            child: Padding(
-                                              padding: EdgeInsets.all(8.0),
-                                              child: Icon(
-                                                Icons.more_vert,
-                                                color: Colors.black,
-                                              ),
-                                            ),
-                                          ),
-                                        ]),
-                                      ],
-                                    ),
-                                  ), // end of table
+
+                                  SizedBox(height: 20,),
+                                  Row(
+                                    children: [
+                                      Expanded(
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(20.0),
+                                          child: FlatButton(
+                                            onPressed: () => {
+                                              Get.toNamed("/healthHerd")
+                                            },
+                                            color: titleColor, textColor: Colors.white,
+                                            child: const Text("حفظ"),),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ],
                               ),
                             ),
                           ),
+                          SizedBox(height: 20,),
                           Container(
                             alignment: Alignment.topCenter,
-                            width: 1550,
+                            width: 1100,
                             height: 500,
                             decoration: BoxDecoration(
                                 border: Border.all(color: titleColor),
@@ -3377,6 +2820,244 @@ class HrManagerPage extends StatelessWidget {
                               ),
                             ),
                           ),
+                          SizedBox(height: 20,),
+                          Container(
+                            alignment: Alignment.topCenter,
+                            width: 900,
+                            height: 500,
+                            decoration: BoxDecoration(
+                                border: Border.all(color: titleColor),
+                                borderRadius: BorderRadius.circular(10.0)),
+                            child: Card(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10.0),
+                              ),
+                              shadowColor: Colors.black,
+                              child: Column(
+                                children: [
+                                  Row(
+                                    children: const [
+                                      Padding(
+                                        padding: EdgeInsets.only(left: 10,top: 10),
+                                        child: Icon(Icons.cancel_outlined, color: titleColor,),
+                                      ),
+                                      Spacer(),
+                                      Padding(
+                                        padding: EdgeInsets.only(right: 30,top: 10),
+                                        child: Text("إنشاء مستخدم جديد", style: TextStyle(color: titleColor), ),
+                                      )
+                                    ],
+                                  ),
+                                  SizedBox(height: 20,),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children:  [
+                                      SizedBox(width: 50,),
+                                      Container(
+                                        width: 120,
+                                        padding: EdgeInsets.symmetric(horizontal: 8),
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadiusDirectional.circular(10),
+                                          border: Border.all(color: titleColor),
+                                        ),
+                                        child: DropdownButton(
+
+                                          // Initial Value
+                                          value: dropdownvalue,
+
+                                          // Down Arrow Icon
+                                          icon: const Icon(Icons.keyboard_arrow_down),
+
+                                          // Array list of items
+                                          items: items.map((String items) {
+                                            return DropdownMenuItem(
+                                              value: items,
+                                              child: Text(items),
+                                            );
+                                          }).toList(),
+                                          // After selecting the desired option,it will
+                                          // change button value to selected value
+                                          onChanged: (String? newValue) {
+                                            Get.snackbar("Action", "This is event for list");
+                                          },
+                                        ),
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.all(8.0),
+                                        child: Text("* الدور", style: TextStyle(color: titleColor),),
+                                      ),
+                                      SizedBox(width: 50,),
+                                      Container(
+                                        width: 120,
+                                        padding: EdgeInsets.symmetric(horizontal: 8),
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadiusDirectional.circular(10),
+                                          border: Border.all(color: titleColor),
+                                        ),
+                                        child: DropdownButton(
+
+                                          // Initial Value
+                                          value: dropdownvalue,
+
+                                          // Down Arrow Icon
+                                          icon: const Icon(Icons.keyboard_arrow_down),
+
+                                          // Array list of items
+                                          items: items.map((String items) {
+                                            return DropdownMenuItem(
+                                              value: items,
+                                              child: Text(items),
+                                            );
+                                          }).toList(),
+                                          // After selecting the desired option,it will
+                                          // change button value to selected value
+                                          onChanged: (String? newValue) {
+                                            Get.snackbar("Action", "This is event for list");
+                                          },
+                                        ),
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.all(8.0),
+                                        child: Text("*الموظف", style: TextStyle(color: titleColor),),
+                                      ),
+
+                                    ],
+                                  ),
+                                  SizedBox(height: 20,),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children:  [
+                                      SizedBox(width: 50,),
+                                      Container(
+                                        width: 120,
+                                        padding: EdgeInsets.symmetric(horizontal: 8),
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadiusDirectional.circular(10),
+                                          border: Border.all(color: titleColor),
+                                        ),
+                                        child: DropdownButton(
+
+                                          // Initial Value
+                                          value: dropdownvalue,
+
+                                          // Down Arrow Icon
+                                          icon: const Icon(Icons.keyboard_arrow_down),
+
+                                          // Array list of items
+                                          items: items.map((String items) {
+                                            return DropdownMenuItem(
+                                              value: items,
+                                              child: Text(items),
+                                            );
+                                          }).toList(),
+                                          // After selecting the desired option,it will
+                                          // change button value to selected value
+                                          onChanged: (String? newValue) {
+                                            Get.snackbar("Action", "This is event for list");
+                                          },
+                                        ),
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.all(8.0),
+                                        child: Text("*الموقع", style: TextStyle(color: titleColor),),
+                                      ),
+                                      SizedBox(width: 50,),
+                                      Container(
+                                        width: 120,
+                                        padding: EdgeInsets.symmetric(horizontal: 8),
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadiusDirectional.circular(10),
+                                          border: Border.all(color: titleColor),
+                                        ),
+                                        child: DropdownButton(
+
+                                          // Initial Value
+                                          value: dropdownvalue,
+
+                                          // Down Arrow Icon
+                                          icon: const Icon(Icons.keyboard_arrow_down),
+
+                                          // Array list of items
+                                          items: items.map((String items) {
+                                            return DropdownMenuItem(
+                                              value: items,
+                                              child: Text(items),
+                                            );
+                                          }).toList(),
+                                          // After selecting the desired option,it will
+                                          // change button value to selected value
+                                          onChanged: (String? newValue) {
+                                            Get.snackbar("Action", "This is event for list");
+                                          },
+                                        ),
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.all(8.0),
+                                        child: Text("* البريد الإلكتروني", style: TextStyle(color: titleColor),),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(height: 20,),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children:  [
+                                      Expanded(
+                                        child: TextField(
+                                          cursorColor: titleColor,
+                                          decoration: InputDecoration(
+                                            focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
+                                            border: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
+                                            // labelText: "إدخل التاريخ",
+                                          ),
+                                        ),
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.all(8.0),
+                                        child: Text("* اسم المستخدم", style: TextStyle(color: titleColor),),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(height: 20,),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children:  [
+                                      Expanded(
+                                        child: TextField(
+                                          cursorColor: titleColor,
+                                          decoration: InputDecoration(
+                                            focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
+                                            border: OutlineInputBorder(borderSide: BorderSide(color: titleColor)),
+                                            // labelText: "إدخل التاريخ",
+                                          ),
+                                        ),
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.all(8.0),
+                                        child: Text("* اسم المستخدم", style: TextStyle(color: titleColor),),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(height: 20,),
+                                  Row(
+                                    children: [
+                                      Expanded(
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(20.0),
+                                          child: FlatButton(
+                                            onPressed: () => {
+                                              Get.toNamed("/healthHerd")
+                                            },
+                                            color: titleColor, textColor: Colors.white,
+                                            child: const Text("حفظ"),),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 20,),
                         ],
                       ),
                       Spacer(),

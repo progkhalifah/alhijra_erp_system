@@ -93,7 +93,8 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/supplyorder', page: ()=>SupplyOrderPage()),
 
         // This route for Finance Manager
-        GetPage(name: '/financemanagerpage', page: ()=>FinanceManagerPage()),
+        GetPage(name: '/', page: ()=>FinanceManagerPage()),
+        // GetPage(name: '/financemanagerpage', page: ()=>FinanceManagerPage()),
         GetPage(name: '/purchasesreturned', page: ()=>PurchasesReturnedPage()),
         GetPage(name: '/purchasesbill', page: ()=>PurchasesBillPage()),
         GetPage(name: '/salesreturned', page: ()=>SalesReturnedPage()),
@@ -103,8 +104,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/salesmanagerpage', page: ()=>SalesManagerPage()),
 
         // This route for HR Manager
-        // GetPage(name: '/hrmanagerpage', page: ()=>HrManagerPage()),
-        GetPage(name: '/', page: ()=>HrManagerPage()),
+        GetPage(name: '/hrmanagerpage', page: ()=>HrManagerPage()),
 
       ],
     );
