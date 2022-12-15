@@ -185,7 +185,6 @@ class FinanceManagerPage extends StatelessWidget {
                                                   ],
                                                 ),
                                               ),
-
                                             ),
                                           ),
                                           SizedBox(width: 20,),
@@ -1650,26 +1649,29 @@ Widget sidebarmenu() {
             ),
           ],
         ),
-        Row(
-          children: const [
-            Icon(
-              Icons.keyboard_arrow_down,
-              color: Colors.black26,
-              size: 30,
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 40.0, right: 30.0),
-              child: Text(
-                "الـمــشـتـريــات",
-                style: TextStyle(fontSize: 20, color: titleColor),
+        Container(
+          color: Colors.white,
+          child: Row(
+            children: const [
+              Icon(
+                Icons.keyboard_arrow_down,
+                color: Colors.black26,
+                size: 30,
               ),
-            ),
-            Icon(
-              Icons.list_alt,
-              color: Colors.black26,
-              size: 20,
-            ),
-          ],
+              Padding(
+                padding: EdgeInsets.only(left: 40.0, right: 30.0),
+                child: Text(
+                  "الـمــشـتـريــات",
+                  style: TextStyle(fontSize: 20, color: titleColor),
+                ),
+              ),
+              Icon(
+                Icons.list_alt,
+                color: Colors.black26,
+                size: 20,
+              ),
+            ],
+          ),
         ),
         Row(
           children: const [
@@ -1735,26 +1737,29 @@ Widget sidebarmenu() {
             ),
           ],
         ),
-        Row(
-          children: const [
-            Icon(
-              Icons.keyboard_arrow_down,
-              color: Colors.black26,
-              size: 30,
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 40.0, right: 30.0),
-              child: Text(
-                "المحاسبية المالية",
-                style: TextStyle(fontSize: 20, color: titleColor),
+        Container(
+          color: Colors.white,
+          child: Row(
+            children: const [
+              Icon(
+                Icons.keyboard_arrow_down,
+                color: Colors.black26,
+                size: 30,
               ),
-            ),
-            Icon(
-              Icons.list_alt,
-              color: Colors.black26,
-              size: 20,
-            ),
-          ],
+              Padding(
+                padding: EdgeInsets.only(left: 40.0, right: 30.0),
+                child: Text(
+                  "المحاسبية المالية",
+                  style: TextStyle(fontSize: 20, color: titleColor),
+                ),
+              ),
+              Icon(
+                Icons.list_alt,
+                color: Colors.black26,
+                size: 20,
+              ),
+            ],
+          ),
         ),
         Row(
           children: const [

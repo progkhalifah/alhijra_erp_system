@@ -15,112 +15,234 @@ class ListManagerPage extends StatelessWidget {
       body: Center(
         child: Row(
           children: [
-            Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Text(
-                      "نظام شركة الهجرة",
-                      style: TextStyle(fontSize: 40, color: titleColor),
+            Padding(
+              padding: const EdgeInsets.only(left: 200.0),
+              child: Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text(
+                        "نظام شركة الهجرة",
+                        style: TextStyle(fontSize: 40, color: titleColor),
+                      ),
                     ),
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Text(
-                      "قائمة بالمدراء وصفحاتهم",
-                      style: TextStyle(
-                          fontSize: 20,
-                          color: Colors.black38,
-                          decoration: TextDecoration.underline),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text(
+                        "قائمة بالمدراء وصفحاتهم",
+                        style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.black38,
+                            decoration: TextDecoration.underline),
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: FlatButton(
-                      onPressed: () => {
-                        Get.toNamed("/adminpage")
-                      },
-                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                      color: titleColor,
-                      child: Text("مدير عام"),
-                      textColor: Colors.white,
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child:SizedBox(
+                        width: 240,
+                        height: 50,
+                        child: Expanded(
+                          child: ElevatedButton(
+                            onPressed: () {Get.toNamed("/adminpage");},
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.white, // Background color
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: const [
+                                Text('مدير عام',style: TextStyle(color: titleColor),), // <-- Text
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Icon( // <-- Icon
+                                  Icons.label_important_outline,
+                                  size: 24.0,
+                                  color: buttonColor,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: FlatButton(
-                      onPressed: () => {
-                        Get.toNamed("/locationmanagerpage")
-                      },
-                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                      color: titleColor,
-                      child: Text("مدير موقع"),
-                      textColor: Colors.white,
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child:SizedBox(
+                        width: 240,
+                        height: 50,
+                        child: Expanded(
+                          child: ElevatedButton(
+                            onPressed: () {Get.toNamed("/locationmanagerpage");},
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.white, // Background color
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: const [
+                                Text('مدير موقع',style: TextStyle(color: titleColor),), // <-- Text
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Icon( // <-- Icon
+                                  Icons.label_important_outline,
+                                  size: 24.0,
+                                  color: buttonColor,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: FlatButton(
-                      onPressed: () => {
-                        Get.toNamed("/farmmanagerpage")
-                      },
-                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                      color: titleColor,
-                      child: Text("مدير مزرعة"),
-                      textColor: Colors.white,
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child:SizedBox(
+                        width: 240,
+                        height: 50,
+                        child: Expanded(
+                          child: ElevatedButton(
+                            onPressed: () {Get.toNamed("/farmmanagerpage");},
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.white, // Background color
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: const [
+                                Text('مدير مزرعة',style: TextStyle(color: titleColor),), // <-- Text
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Icon( // <-- Icon
+                                  Icons.label_important_outline,
+                                  size: 24.0,
+                                  color: buttonColor,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: FlatButton(
-                      onPressed: () => {
-                        Get.toNamed("/inventorymanagerpage")
-                      },
-                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                      color: titleColor,
-                      child: Text("مدير مخزن"),
-                      textColor: Colors.white,
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child:SizedBox(
+                        width: 240,
+                        height: 50,
+                        child: Expanded(
+                          child: ElevatedButton(
+                            onPressed: () {Get.toNamed("/inventorymanagerpage");},
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.white, // Background color
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: const [
+                                Text('مدير مخزن',style: TextStyle(color: titleColor),), // <-- Text
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Icon( // <-- Icon
+                                  Icons.label_important_outline,
+                                  size: 24.0,
+                                  color: buttonColor,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: FlatButton(
-                      onPressed: () => {
-                        Get.toNamed("/financemanagerpage")
-                      },
-                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                      color: titleColor,
-                      child: Text("مدير مالي"),
-                      textColor: Colors.white,
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child:SizedBox(
+                        width: 240,
+                        height: 50,
+                        child: Expanded(
+                          child: ElevatedButton(
+                            onPressed: () {Get.toNamed("/financemanagerpage");},
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.white, // Background color
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: const [
+                                Text('مدير مالي',style: TextStyle(color: titleColor),), // <-- Text
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Icon( // <-- Icon
+                                  Icons.label_important_outline,
+                                  size: 24.0,
+                                  color: buttonColor,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: FlatButton(
-                      onPressed: () => {
-                        Get.toNamed("/salesmanagerpage")
-                      },
-                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                      color: titleColor,
-                      child: Text("المبيعات"),
-                      textColor: Colors.white,
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child:SizedBox(
+                        width: 240,
+                        height: 50,
+                        child: Expanded(
+                          child: ElevatedButton(
+                            onPressed: () {Get.toNamed("/salesmanagerpage");},
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.white, // Background color
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: const [
+                                Text('المبيعات',style: TextStyle(color: titleColor),), // <-- Text
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Icon( // <-- Icon
+                                  Icons.label_important_outline,
+                                  size: 24.0,
+                                  color: buttonColor,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: FlatButton(
-                      onPressed: () => {
-                        Get.toNamed("/hrmanagerpage")
-                      },
-                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                      color: titleColor,
-                      child: Text("الموارد البشرية"),
-                      textColor: Colors.white,
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: SizedBox(
+                        width: 240,
+                        height: 50,
+                        child: Expanded(
+                          child: ElevatedButton(
+                            onPressed: () {Get.toNamed("/hrmanagerpage");},
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.white, // Background color
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: const [
+                                Text('الموارد البشرية',style: TextStyle(color: titleColor),), // <-- Text
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Icon( // <-- Icon
+                                  Icons.label_important_outline,
+                                  size: 24.0,
+                                  color: buttonColor,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
             Spacer(),

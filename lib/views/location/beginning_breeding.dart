@@ -45,7 +45,7 @@ class BeginningBreeding extends StatelessWidget {
                     Spacer(),
                     Padding(
                       padding: EdgeInsets.only(right: 30,top: 10),
-                      child: Text("إدخال بداية مرحلة إنتاج", style: TextStyle(color: titleColor), ),
+                      child: Text("إدخال بداية مرحلة تربية", style: TextStyle(color: titleColor), ),
                     )
                   ],
                 ),
