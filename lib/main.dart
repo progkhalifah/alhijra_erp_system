@@ -32,7 +32,9 @@ import 'package:alhijra/views/manager/page_manager.dart';
 import 'package:alhijra/views/manager/pagea_add_resource.dart';
 import 'package:alhijra/views/page_list_manager.dart';
 import 'package:alhijra/views/page_signup.dart';
+import 'package:alhijra/views/sales/enter_data_sales.dart';
 import 'package:alhijra/views/sales/page_sales_manager.dart';
+import 'package:alhijra/views/sales/sales_recipt.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:alhijra/views/page_login.dart';
@@ -55,7 +57,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/loginpage', page: ()=>LoginPage()),
         GetPage(name: '/signuppage', page: ()=>SignUpPage()),
 
-        GetPage(name: '/', page: ()=>ListManagerPage()),
+        GetPage(name: '/list', page: ()=>ListManagerPage()),
 
         // This route for General Manager
         GetPage(name: '/adminpage', page: ()=> AdminPage()),
@@ -101,7 +103,10 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/salesbill', page: ()=>SalesBillPage()),
 
         // This route for Sales Manager
-        GetPage(name: '/salesmanagerpage', page: ()=>SalesManagerPage()),
+        // GetPage(name: '/', page: ()=>SalesManagerPage()),
+        // GetPage(name: '/salesmanagerpage', page: ()=>SalesManagerPage()),
+         GetPage(name: '/enterdatasalespage', page: ()=>EnterDataSalesPage()),
+         GetPage(name: '/', page: ()=>SalesReciptPage()),
 
         // This route for HR Manager
         GetPage(name: '/hrmanagerpage', page: ()=>HrManagerPage()),
